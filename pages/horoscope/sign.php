@@ -125,11 +125,11 @@ else if($_GET['on'] == 'year') {
     
     <? require_once($root . '/parts/header/header.php'); ?>
 
-    <div class="horoscope-container">
+    <div class="horoscope-container" itemscope itemtype="http://schema.org/Article">
         <div class="img-wrapper">
-            <img src="../../img/zodiac-signs/animal/<?=$sign->name_en?>.png" alt="">
+            <img src="../../img/zodiac-signs/animal/<?=$sign->name_en?>.png" itemprop="image" alt="Знак зодиака <?=$sign->name_ru?>">
         </div>
-        <h1 class="title-text"><?=mb_convert_case($sign->name_ru, MB_CASE_TITLE,'UTF-8')?>. <?=$title_end?></h1>
+        <h1 class="title-text" itemprop="name"><?=mb_convert_case($sign->name_ru, MB_CASE_TITLE,'UTF-8')?>. <?=$title_end?></h1>
 
         <?
             $m = new mysqli('localhost', 'root', 'root', 'taro');
@@ -168,7 +168,7 @@ else if($_GET['on'] == 'year') {
             foreach ($rows as $key => $row) {
                 $openTag = '';
                 if($row->tag == 'p') {
-                    $openTag = '<p class="h4-subtitle-text ">';
+                    $openTag = '<p itemprop="description" class="h4-subtitle-text ">';
                 } else {
                     $openTag = '<h4 class="title-text ">';
                 }
@@ -178,7 +178,7 @@ else if($_GET['on'] == 'year') {
         ?>
     </div>
 
-    <div class="more-signs">
+    <div class="more-signs" itemscope itemtype="http://schema.org/ItemList">
 <?
     // get signs list
     $signs = [
@@ -198,11 +198,11 @@ else if($_GET['on'] == 'year') {
     foreach ($signs as $ruName => $enName) {
         if(mb_strtolower($ruName) == mb_strtolower($sign->name_ru)) continue;
 ?>
-        <div class="sign-wrapper">
-            <a href="sign.php?sign=<?=$enName?>&on=day">
+        <div class="sign-wrapper" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="url" href="sign.php?sign=<?=$enName?>&on=day">
                 <div class="sign">
-                    <div class="sign-img-wrapper"><img src="/img/zodiac-signs/z/<?=$enName?>.png" alt=""></div>
-                    <p class="h4-subtitle-text "><?=$ruName?></p>
+                    <div class="sign-img-wrapper"><img itemprop="image" src="/img/zodiac-signs/z/<?=$enName?>.png" alt="Знак Зодиака <?=$ruName?>"></div>
+                    <p class="h4-subtitle-text" itemprop="name" ><?=$ruName?></p>
                 </div>
             </a>
         </div>

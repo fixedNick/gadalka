@@ -108,10 +108,10 @@ foreach ($signs as $key => $value) {
 </head>
 <body class="light">
     <? require_once($root . '/parts/header/header.php'); ?>
-    <div class="container">
+    <div class="container" itemscope itemtype="http://schema.org/WebPage">
         <div class="compatibility">
-            <h1 class="title-text "><?=mb_convert_case($selectedSign->name_ru, MB_CASE_TITLE, "UTF-8")?>. Любовная совместимость.</h1>
-            <p class="h1-subtitle-text "><?=$selectedSign->FullDatesString();?></p>
+            <h1 class="title-text" itemprop="name"><?=mb_convert_case($selectedSign->name_ru, MB_CASE_TITLE, "UTF-8")?>. Любовная совместимость.</h1>
+            <p class="h1-subtitle-text" ><?=$selectedSign->FullDatesString();?></p>
 
             <?
                 $m = new mysqli('localhost', 'root', 'root', 'taro');
@@ -144,7 +144,7 @@ foreach ($signs as $key => $value) {
                     }
                     ?>
             
-            <h3 class="title-text "><a id="<?=$selectedSign->name_ru.'&'.$targetWithSign->name_ru?>"><?=$selectedSign->name_ru.' & '.$targetWithSign->name_ru?></a></h3>
+            <h3 class="title-text" itemprop="description"><a id="<?=$selectedSign->name_ru.'&'.$targetWithSign->name_ru?>"><?=$selectedSign->name_ru.' & '.$targetWithSign->name_ru?></a></h3>
 
                     <?
                     foreach ($rows as $key => $row) {
@@ -164,18 +164,18 @@ foreach ($signs as $key => $value) {
             ?>
 
         </div>
-        <div class="list-section">
-            <div class="img-wrapper"><img src="https://synastry.qodeinteractive.com/wp-content/uploads/2023/03/h4-aries-2.png" alt=""></div>
-            <h4 class="title-text ">Совместимость</h4>
+        <div class="list-section" itemprop="mainEntity" itemscope itemtype="http://schema.org/ItemList">
+            <div class="img-wrapper"><img itemprop="image" src="/img/zodiac-signs/circle/<?=$selectedSign->name_en?>.png" alt="Знак зодиака <?=$selectedSign->name_ru?>"></div>
+            <h4 class="title-text" itemprop="name">Совместимость</h4>
             <?foreach ($signs as $k => $s) {?>
-            <div class="learn-more-btn ">
+            <div class="learn-more-btn">
                 <span class="s-icon">
                     <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" width="10.74" height="13.387" viewBox="0 0 10.74 13.387" fill="currentColor"><path d="M10.608 6.877a8.066 8.066 0 0 1-3.345-1.454c-1-.939-1.519-3.711-1.786-5.281a.172.172 0 0 0-.339 0c-.236 1.61-.756 4.518-1.9 5.508a7.393 7.393 0 0 1-3.1 1.249.171.171 0 0 0 0 .335 7.437 7.437 0 0 1 3.454 1.628c.856.876 1.3 3.033 1.523 4.378a.172.172 0 0 0 .339 0c.207-1.34.622-3.495 1.465-4.373a7.487 7.487 0 0 1 3.689-1.655.171.171 0 0 0 0-.335Z"></path></svg>
                 </span>
                 <?
                 $linkAndText = $selectedSign->name_ru . ' & ' . $s->name_ru;
                 ?>
-                <a href="#<?=str_replace(' ', '', $linkAndText)?>" class="text">
+                <a itemprop="url" href="#<?=str_replace(' ', '', $linkAndText)?>" class="text">
                     <?=$linkAndText?>
                 </a>
             </div>

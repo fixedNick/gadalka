@@ -13,7 +13,7 @@ if (isset($_GET['page']) && $_GET['page'] >= 1)
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

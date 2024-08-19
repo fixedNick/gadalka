@@ -88,11 +88,11 @@
     
     <? require_once($root . '/parts/header/header.php'); ?>
     
-    <div class="love-outer">
+    <div class="love-outer" itemscope itemtype="http://schema.org/ItemList">
         <div class="love-container">
             <div class="title-area">
-                <h1 class="title-text light-bg">Любовная совместимость</h1>
-                <p class="h1-subtitle-text light-bg">Выбери свой знак зодиака</p>
+                <h1 class="title-text light-bg" itemprop="name">Любовная совместимость</h1>
+                <p class="h1-subtitle-text light-bg" itemprop="description">Выбери свой знак зодиака</p>
             </div>
             <?
 
@@ -100,14 +100,15 @@
                 $counter = 0;
                 foreach ($signs as $key => $sign) {
                     ?>
-                            <div class="sign">
-                                <a href="compatibility.php?sign=<?=$sign->name_en;?>">
-                                    <div class="img-wrapper"><img src="../../img/zodiac-signs/circle/<?=$sign->name_en;?>.png" alt="zodiac-sign-<?=$sign->name_en;?>"></div>
-                                    <div class="sign-name">
+                            <div class="sign" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a href="compatibility.php?sign=<?=$sign->name_en;?>" itemprop="url">
+                                    <div class="img-wrapper"><img itemprop="image" src="../../img/zodiac-signs/circle/<?=$sign->name_en;?>.png" alt="zodiac-sign-<?=$sign->name_en;?>"></div>
+                                    <div class="sign-name" itemprop="name">
                                         <h4 class="title-text light-bg"><?=$sign->name_ru;?></h4>
                                         <p class="date h4-subtitle-text light-bg"><?=$sign->ShortDatesString()?></p>
                                     </div>
                                 </a>
+                                <meta itemprop="position" content="<?=($counter + 1);?>">
                             </div>
 
                     <?

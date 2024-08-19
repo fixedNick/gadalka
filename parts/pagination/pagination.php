@@ -24,10 +24,11 @@ function getPagination($currentPage, $totalPages, $clearLink) {
       $nextPage = '';
       $to = '78';
     }
-
-    return "<div class='pagination-container'>
-      <span class='pagination-count'>$from - $to из 78</span>
-      <a $prevPage><span class='pagination-btn left $inactiveLeft'><</span></a>
-      <a $nextPage><span class='pagination-btn rigth $inactiveRight'>></span></a>
+    $lastUpdateDate = date("Y-m-d", date_timestamp_get(new DateTime()));
+    return "<div class='pagination-container' itemscope itemtype='http://schema.org/WebPage'>
+      <meta itemprop='lastReviewed' content='$lastUpdateDate'> 
+      <span itemprop='pagination' class='pagination-count'>$from - $to из 78</span>
+      <a itemprop='previousPage' $prevPage><span class='pagination-btn left $inactiveLeft'><</span></a>
+      <a itemprop='nextPage' $nextPage><span class='pagination-btn rigth $inactiveRight'>></span></a>
     </div>";
 }

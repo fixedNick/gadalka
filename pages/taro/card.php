@@ -12,7 +12,7 @@ $card = Card::NewFromCid($_GET['cid']);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -106,13 +106,13 @@ $card = Card::NewFromCid($_GET['cid']);
     
     <? require_once($root.'/parts/header/header.php') ?>
     
-    <div class="card-info-container">
+    <div class="card-info-container" itemscope itemtype="http://schema.org/Article">
         <div class="card-img-wrapper">
-            <img src="/img/cards/<?=$card->id?>.png" alt="">
+            <img src="/img/cards/<?=$card->id?>.png" itemprop="image" alt="Карта Таро <?=$card->ru_name?>">
         </div>
 
         <div class="card-info-wrapper">
-            <div class="card-title"><?=$card->ru_name?></div>
+            <div class="card-title" itemprop="name"><?=$card->ru_name?></div>
 
             <?$card->PrintDesc('baseDesc');?>
             <? if(count($card->baseInfo->up_keywords) > 0) { ?>
@@ -181,38 +181,41 @@ $card = Card::NewFromCid($_GET['cid']);
            
         </div>
 
-        <div class="share-reading-wrapper">
+        <div class="share-reading-wrapper" itemscope itemtype="http://schema.org/WebPageElement">
+        <meta itemprop="description" content="Поделиться статьей">
 
             <div class="share-reading-title">
                 <h3 class="share-title">Поделиться</h3>
             </div>            
 
-            <ul class="links-list">
-                <li class="sm-link">
+            <ul class="links-list" itemprop="hasPart" itemscope itemtype="http://schema.org/ItemList">
+                <li class="sm-link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                     <span>
                         <i class="fa-brands fa-square-odnoklassniki"></i>
                     </span>
-                    <a href="#">Одноклассники</a>
+                    <a itemprop="url" href="#">Одноклассники</a>
+                    <meta itemprop="position" content="1">
                 </li>
-                <li class="sm-link">
+                <li class="sm-link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                     <span>
-                        <i class="fa-brands fa-telegram">
-
-                        </i>
+                        <i class="fa-brands fa-telegram"></i>
                     </span>
-                    <a href="#">Телеграм</a>
+                    <a itemprop="url" href="#">Телеграм</a>
+                    <meta itemprop="position" content="2">
                 </li>
-                <li class="sm-link">
+                <li class="sm-link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                     <span>
                         <i class="fa-brands fa-vk"></i>
                     </span>
-                    <a href="#">Вконтакте</a>
+                    <a itemprop="url" href="#">Вконтакте</a>
+                    <meta itemprop="position" content="3">
                 </li>
-                <li class="sm-link">
+                <li class="sm-link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                     <span>
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </span>
-                    <a href="#">Скопировать ссылку</a>
+                    <a itemprop="url" href="#">Скопировать ссылку</a>
+                    <meta itemprop="position" content="4">
                 </li>
             </ul>
         </div>
