@@ -1,0 +1,122 @@
+h1.title-text {
+    font-size: 4em;
+    font-family: "Cactus Classical Serif", serif !important;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.light h1,.light h4,.light h3 {
+    color: #936D42;
+}
+.dark h1, .dark h4,.dark h3 {
+    color: rgb(202, 157, 117);
+}
+.light h3 a {
+    color: #936D42 !important;
+}
+.dark a {
+    color: #fff;
+}
+.light a {
+    color: black;
+}
+
+p.h1-subtitle-text {
+    font-size: 1.5em;
+    font-family: "Rubik", sans-serif;
+}
+
+.dark p {
+    color: rgb(195, 190, 182);
+}
+
+.light p {
+    color: rgb(67, 62, 55);
+}
+
+h3.title-text {
+	font-size: 2.2em;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
+	outline-color: rgb(202, 157, 117);
+    font-family: "Rubik", sans-serif;
+}
+
+h4.title-text {
+	font-size: 1.7em;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
+	outline-color: rgb(202, 157, 117);
+    font-family: "Rubik", sans-serif;
+}
+
+p.h4-subtitle-text {
+    font-size: 1em !important;
+    font-family: "Rubik", sans-serif;
+    word-wrap: break-word;
+}
+
+
+/* btn with icon */
+.s-icon, .icon {
+    overflow: hidden;
+}
+
+.star-icon {
+	color : #936d42;
+}
+
+
+.learn-more-btn {
+    display: flex;
+    column-gap: 6px;
+    align-items: normal;
+    position: relative;
+	padding: 6px 0;
+	width: max-content;
+	cursor: pointer;
+}
+.learn-more-btn svg{
+    transition: .3s;
+}
+
+.light .learn-more-btn a {
+    color: rgb(7, 5, 6);
+}
+
+.dark .learn-more-btn a {
+    color: #fff;
+}
+
+.learn-more-btn a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Rubik", sans-serif;
+    font-size: .8em;
+    font-weight: 400;
+}
+
+.learn-more-btn::after{
+    content: '';
+    transition: .4s ease-out;
+    display: inline-flex;
+    position: absolute;
+    width: 0%;
+    bottom: 0;
+    border-bottom: 1px solid #936d42;
+}
+.learn-more-btn:hover::after{
+    transition: .4s ease-out;
+    width: 100%;
+}
+.learn-more-btn:hover {
+    svg {
+        transition: .3s;
+        transform: rotate(90deg);
+    }
+}
+

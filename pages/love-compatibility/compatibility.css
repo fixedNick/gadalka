@@ -1,0 +1,118 @@
+body {
+    background-color: #fdf8f4;
+}
+
+.container {
+    display: flex;
+    min-height: 100%;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    padding: 150px 0 100px 0;
+    width: 80%;
+    left: 10%;
+    position: relative;
+    justify-content: space-between;
+}
+.compatibility {
+    width: 70%;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 3.5em;
+    line-height: 1.05em;
+}
+
+.list-section {
+    width: calc(30% - 40px);
+    padding-left: 60px;
+    border-left: 1px solid #C3BEB6;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-section h4 {
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 90%;
+        left: 5%;
+        gap: 20px;
+    }
+
+    .list-section {
+        width: calc(40% - 40px - 20px);
+        padding-left: 40px;
+    }
+
+    .list-section h4 {
+        letter-spacing: 0;
+    }
+    .compatibility {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+    .compatibility {
+        order: 2;
+        width: 100%;
+    }
+    .list-section {
+        border: none;
+        padding-left: 0;
+        width: 100%;
+        order: 1;
+        padding-bottom: 25px;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-bottom: 1px solid rgba(0, 0, 0, .3);
+    }
+
+    .list-section .img-wrapper, .list-section .title-text {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    h1 {
+        font-size: 3.2em !important;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    h1 {
+        font-size: 2.7em !important;
+    }
+
+    h3 {
+        font-size: 2em !important;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    h1 {
+        font-size: 2.2em !important;
+    }
+    h3 {
+        font-size: 1.7em !important;
+    }
+
+    .list-section {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,942 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: rgb(7, 5, 6);
+}
+
+.bg-stars.taro-cards-section {
+    display: flex;
+    width: 100%;
+    position: relative;
+    min-height: calc(100vh - 110px);
+    flex-direction: column;
+}
+
+.cards-wrapper {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	bottom: -75vh;
+	z-index: 18;
+}
+
+.taro-card {
+	position: absolute;
+	left: 10%;
+	width: 342px;
+	height: 564px;
+	transition: .3s;
+	width: auto;
+	height: auto;
+	margin-bottom: 0px;
+	cursor: pointer;
+}
+.taro-card.card1 {
+	left: 10vw;
+}
+.taro-card.card8 {
+	left: 69.5vw;
+}
+.taro-card.card2 {
+	left: 18.5vw;
+}
+.taro-card.card3 {
+	left: 27vw;
+}
+.taro-card.card4 {
+	left: 35.5vw;
+}
+.taro-card.card5 {
+	left: 44vw;
+}
+.taro-card.card6 {
+	left: 52.5vw;
+}		
+.taro-card.card7 {
+	left: 61vw;
+}
+
+@media screen and (max-width: 1368px) {
+	.taro-card.card1 {
+		left: 10vw;
+	}
+	.taro-card.card8 {
+		left: 63.5vw;
+	}
+	.taro-card.card2 {
+		left: 17.6vw;
+	}
+	.taro-card.card3 {
+		left: 25.2vw;
+	}
+	.taro-card.card4 {
+		left: 33.6vw;
+	}
+	.taro-card.card5 {
+		left: 41.2vw;
+	}
+	.taro-card.card6 {
+		left: 48.8vw;
+	}
+	.taro-card.card7 {
+		left: 56.2vw;
+	}
+}
+
+@media screen and (max-width: 1090px) {
+	.taro-card.card1 {
+		left: 10vw;
+	}
+	.taro-card.card2 {
+		left: 16.8vw;
+	}
+	.taro-card.card3 {
+		left: 25.6vw;
+	}
+	.taro-card.card4 {
+		left: 32.4vw;
+	}
+	.taro-card.card5 {
+		left: 39.2vw;
+	}
+	.taro-card.card6 {
+		left: 46vw;
+	}
+	.taro-card.card7 {
+		left: 52.8vw;
+	}
+	.taro-card.card8 {
+		left: 59.6vw;
+	}
+	@media screen and (max-height: 540px) {
+		.taro-cards > .text-wrapper {
+			padding-top: 5% !important;
+		}
+		.taro-cards > .text-wrapper > h1 {
+			font-size: 2em !important;
+		}
+		.taro-cards > .text-wrapper > p {
+			font-size: 1.15em !important;
+		}
+	}
+
+	@media screen and (max-height: 453px) {
+		.taro-cards > .text-wrapper {
+			padding-top: 2.5% !important;
+		}
+		.cards-wrapper {
+			bottom: -80vh;
+		}
+	}
+}
+
+
+@media screen and (max-width: 915px) {
+	.taro-card.card1 {
+		left: 10vw;
+	}
+	.taro-card.card2 {
+		left: 15.7vw;
+	}
+	.taro-card.card3 {
+		left: 21.4vw;
+	}
+	.taro-card.card4 {
+		left: 27.1vw;
+	}
+	.taro-card.card5 {
+		left: 32.8vw;
+	}
+	.taro-card.card6 {
+		left: 38.5vw;
+	}
+	.taro-card.card7 {
+		left: 44.2vw;
+	}
+	.taro-card.card8 {
+		left: 50vw;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.taro-card.card1 {
+		left: 10vw;
+	}
+	.taro-card.card2 {
+		left: 14.2vw;
+	}
+	.taro-card.card3 {
+		left: 18.4vw;
+	}
+	.taro-card.card4 {
+		left: 22.6vw;
+	}
+	.taro-card.card5 {
+		left: 26.8vw;
+	}
+	.taro-card.card6 {
+		left: 30.9vw;
+	}
+	.taro-card.card7 {
+		left: 34.1vw;
+	}
+	.taro-card.card8 {
+		left: 40vw;
+	}
+	@media screen and (max-height: 342px) {
+		.taro-cards > .text-wrapper {
+			padding-top: 1% !important;
+		}
+		.taro-cards > .text-wrapper > h1 {
+			font-size: 1.7em !important;
+		}
+		.taro-cards > .text-wrapper > p {
+			font-size: 1.05em !important;
+		}
+	}
+}
+
+.taro-cards {
+    position: relative;
+    width: 100%;
+    z-index: 15;
+    width: 95%;
+    left: 2.5%;
+}
+
+.taro-cards > .text-wrapper {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.zodiac-sign .img-wrapper {
+	transition: .7s;
+	transform: rotate(0deg);
+}
+.zodiac-sign:hover {
+	cursor: pointer;
+	.img-wrapper {
+		transition: .7s;
+		transform: rotate(45deg);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	h1.title-text {
+		font-size: 2.9em !important;
+    }
+}
+@media screen and (max-width: 610px) {
+.taro-cards h1 {
+	font-size: 2.5em !important;
+	}
+	
+	.cards-wrapper {
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+	}
+	.taro-card {
+		left: auto !important;
+	}
+
+	.taro-card.card1 {
+		top: 45vh;
+	}
+	.taro-card.card2 {
+		top: 50vh;
+	}
+	.taro-card.card3 {
+		top: 55vh;
+	}
+	.taro-card.card4 {
+		top: 60vh;
+	}
+	.taro-card.card5 {
+		top: 65vh;
+	}
+	.taro-card.card6 {
+		top: 70vh;
+	}
+	.taro-card.card7 {
+		top: 75vh;
+	}
+	.taro-card.card8 {
+		top: 80vh;
+	}
+	@media screen and (max-height: 1024px) {
+		.cards-wrapper {
+			bottom: -12vh !important;
+		}
+		.taro-card {
+			width: 300px !important;
+		}
+
+		.taro-cards > .text-wrapper {
+			padding-top: 3% !important;
+		}
+		.taro-cards > .text-wrapper > h1 {
+			font-size: 2em !important;
+		}
+	}
+
+	@media screen and (max-height: 794px) {
+		.taro-cards > .text-wrapper {
+			padding-top: 2%;
+		}
+		.taro-cards > .text-wrapper > h1 {
+			font-size: 2em !important;
+		}
+		.taro-cards > .text-wrapper > p {
+			font-size: 1.15em !important;
+		}
+	}
+	@media screen and (max-height: 440px) {
+		.cards-wrapper {
+			bottom: -29vh !important;
+		}
+	}
+	@media screen and (max-height: 320px) {
+		.cards-wrapper {
+			bottom: -37vh !important;
+		}
+	}
+}
+
+@media screen and (max-width: 560px) {
+	@media screen and (max-height: 564px) {
+		.cards-wrapper {
+			bottom: -29vh !important;
+		}
+	}
+}
+
+@media screen and (max-width: 360px) {
+	@media screen and (max-height: 700px) {
+		.taro-cards > .text-wrapper {
+			padding-top: 1% !important;
+		}
+		.taro-cards > .text-wrapper > h1 {
+			font-size: 1.7em !important;
+		}
+		.taro-cards > .text-wrapper > p {
+			font-size: 1.05em !important;
+		}	
+	}
+
+	@media screen and (max-height: 550px) {
+		.cards-wrapper {
+			bottom: -15vh !important;
+		}
+		.taro-cards > .text-wrapper > h1 {
+			font-size: 1.5em !important;
+		}
+		.taro-cards > .text-wrapper > p {
+			font-size: 1.05em !important;
+		}	
+	}
+
+	@media screen and (max-height: 500px) {
+		.cards-wrapper {
+			bottom: -29vh !important;
+		}
+	}
+}
+
+.card-clicked {
+	pointer-events: none;
+}
+
+.taro-card >img {
+	background: transparent;
+	object-fit: cover;
+}
+
+.star {
+	z-index: 1;
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: white;
+	border-radius: 50%;
+	
+	animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+	0%, 100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	50% {
+		transform: scale(2.7);
+		opacity: 0.5;
+	}
+}
+
+.horoscope-section {
+    padding: 100px 0;
+    z-index: 19;
+    position: relative;
+    background-color: rgb(7, 5, 6);
+}
+
+.horoscope {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.horoscope .text-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 15px;
+}
+
+.zodiac-sign {
+    width: calc(16.6% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.img-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.img-wrapper > img {
+    width: 150px;
+}
+
+.signs-wrapper {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    left: 7.5%;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 50px;
+}
+
+@media (max-width: 1024px) {
+    .zodiac-sign {
+        width: calc(33.3% - 50px);
+    }
+}
+
+@media (max-width: 600px) {
+    .zodiac-sign {
+        width: calc(50% - 50px);
+    }
+
+    .signs-wrapper {
+        row-gap: 40px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .signs-wrapper { 
+        width: 90%;
+        column-gap: 0;
+        justify-content: center;
+    }
+    .zodiac-sign {
+        width: calc(100% - 50px);
+    }
+}
+
+.sign-types-section {
+    position: relative;
+    background-color: rgb(7, 5, 6);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.sign-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    padding: 80px 40px;
+    text-align: center;
+    border: 1px solid rgb(147, 109, 66);
+}
+
+.sign-type .img-wrapper {
+	position: relative;
+	top: 0;
+	transition: .3s;
+}
+
+.sign-type:hover {
+	.img-wrapper {
+		transition: .3s;
+		top: -30px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+    .sign-type {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sign-type {
+        width: 100%;
+    }
+}
+
+
+.sign-type img {
+    max-width: 229px;
+    max-height: 300px;
+    width: 100%;
+}
+
+.sign-type h3 {
+    padding: 20px 0px 10px;
+}
+
+.sign-type p {
+    padding: 0px 0px 50px;  
+}
+
+
+
+
+.blog-section {
+    position: relative;
+    padding-bottom: 100px;
+    width: 100%;
+    height: 80vh;
+    display: block;
+    overflow: hidden;
+    margin: 0px auto;
+    background: url(img/blog-bg.jpg) center center / cover no-repeat;
+}
+
+.blog-wrapper {
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    left: 40%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 40px;
+    h1 {
+        line-height: initial;
+    }
+}
+
+/* free guide */
+.birth-guide {
+	background-color: #141313;
+	min-width: 100%;
+	min-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.birth-guide h1 {
+	height: auto;
+	width: 90%;
+	font-size: 2em;
+	font-weight: 500;
+	text-align: center;
+	margin-top: 60px;
+}
+
+.birth-guide span, .birth-guide h1 {
+	background-color: transparent;
+}
+
+.i-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: transparent;
+	width: 70%;
+	align-items: center;
+	justify-content: center;
+	margin-top: 60px;
+}
+
+.input {
+	display: inline-flex;
+	background-color: transparent;
+	width: calc(45% - 20px);
+	margin-top: 50px;
+	overflow: hidden;
+}
+
+.input-margin {
+	margin-left: 40px;
+}
+
+.input input, .input select {
+	position: relative;
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+	padding: 15px 25px;
+	border: 1px solid #936d42;
+	color: rgb(195, 190, 182);
+	font-size: 14px;
+	transition: .3s;
+	font-family: 'Mulish', sans-serif;
+}
+
+.input input::placeholder {
+	color: rgb(195, 190, 182);
+}
+
+.input select {
+	width: calc(100% - 16.5px);
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+}
+
+.input select:focus-visible {
+	outline: none;
+	transition: .3s;
+	text-decoration: none;
+	outline: none;
+	border: 1px solid #ca9d75;
+}
+
+.input i {
+	position: relative;
+    background: transparent;
+    left: -40px;
+    top: 17px;
+	overflow: hidden;
+	z-index: 221;
+	color: #ca9d75;
+}
+
+.input input:focus {
+	transition: .3s;
+	text-decoration: none;
+	outline: none;
+	border: 1px solid #ca9d75;
+}
+
+.input option {
+	background-color: rgb(22, 21, 21);
+	color: rgb(195, 190, 182);
+}
+
+.btn {
+	position: relative;
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	border-radius: 0;
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1.2em;
+	overflow: hidden;
+	cursor: pointer;
+	gap: 10px;
+}
+
+.btn-accept {
+	background-color: #fff;
+}
+
+.guide-btn {
+		margin-bottom: 100px;
+		margin-top: 100px;
+}
+
+.btn {
+	transition: .6s;
+	padding-top: 10px;
+	border: 3px solid rgba(255,255,255,0);
+}
+.btn svg {
+	transition: .6s;
+	transform: rotate(0deg);
+}
+
+.btn * {
+	background-color: transparent !important;
+}
+.btn .text {
+	color: black;
+	text-transform: uppercase;
+	font-weight: 600;
+	padding-top: 2px;
+	font-size: 15px;
+    font-family: "Mulish", sans-serif;
+}
+
+.btn:hover {
+	transition: .6s;
+	border: 3px solid rgb(202, 157, 117, 1);
+	svg {
+		transition: .6s;
+		transform: rotate(90deg);
+	}
+}
+
+select::selection {
+	border: 1px solid #ca9d75;
+}
+
+@media (min-width: 1025px) {
+	.birth-guide h1 {
+		font-size: 3em !important;
+	}
+	.input input, .input select {
+		padding: 20px 60px 20px 20px;
+		font-size: 20px;
+	}
+
+	.input i {
+		top: 0;
+		font-size: 20px;
+		line-height: 65px;
+		left: -42px;
+		min-width: 25px;
+	}
+
+	.i-wrapper {
+		width: 80%;
+	}
+
+	.birth-guide .btn {
+		width: auto;
+		height: auto;
+		padding: 20px 50px;
+		border-radius: 50px;
+	}
+	.birth-guide .btn span {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 1024px) and (max-width: 1160px) {
+	.input {
+		width: 70%;
+		margin-top: 30px;
+	}
+	.input-margin {
+		margin-left: 0;
+	}
+	
+	.input input, .input select {
+		padding: 20px 30px;
+		font-size: 17px;
+	}
+	.input i {
+		font-size: 20px;
+		line-height: 60px;
+		top: 0;
+		min-width: 20px;
+	}
+
+	.birth-guide .guide-btn {
+		margin-top: 50px;
+	} 
+	.btn {
+		width: auto;
+		height: auto;
+		padding: 15px 50px;
+	}
+	.birth-guide h1 {
+		font-size: 2.5em;
+	}
+}
+
+@media (max-width: 1024px) {
+	.input {
+		width: 70%;
+		margin-top: 30px;
+	}
+	.input-margin {
+		margin-left: 0;
+	}
+	
+	.input input, .input select {
+		padding: 20px 30px;
+		font-size: 20px;
+	}
+	.input i {
+		font-size: 20px;
+		line-height: 60px;
+		top: 0;
+		min-width: 20px;
+	}
+
+	.birth-guide .guide-btn {
+		margin-top: 50px;
+	} 
+	.btn {
+		width: auto;
+		height: auto;
+		padding: 15px 50px;
+	}
+	.birth-guide h1 {
+		font-size: 2.5em;
+	}
+}
+
+@media (max-width: 781px) {
+	.i-wrapper {
+		width: 80%;
+	}
+	.input {
+		width: 100%;
+	}
+}
+
+@media (max-width: 600px) {
+	.birth-guide h1 {
+		font-size: 2em !important;
+	}
+}
+
+@media (max-width: 500px) {
+	.birth-guide h1 {
+		font-size: 1.8em !important;
+	}
+
+	.i-wrapper {
+		width: 90%;
+	}
+
+	.i-wrapper input, .i-wrapper select {
+		padding: 15px 25px;
+		font-size: 19px;
+	}
+
+	.birth-guide .guide-btn {
+		margin-top: 25px;
+	}
+}
+
+@media (max-width: 398px) {
+	.i-wrapper {
+		width: 90%;
+	}
+
+	.i-wrapper input, .i-wrapper select {
+		padding: 15px 25px;
+		font-size: 17px;
+	}
+
+	.birth-guide .guide-btn {
+		margin-top: 25px;
+	}
+}
+
+@media (max-width: 360px) {
+	.birth-guide h1 {
+		font-size: 1.7em !important;
+	}
+	.i-wrapper {
+		position: relative;
+		width: 99%;
+		left: 2%;
+	}
+
+	.i-wrapper input, .i-wrapper select {
+		padding: 15px 10px;
+		font-size: 17px;	
+	}
+
+	.birth-guide .guide-btn {
+		margin-top: 25px;
+	}
+}
+
+
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 3em !important;
+    }
+
+    p.h1-subtitle-text {
+        font-size: 1.35em !important;
+    }
+
+    .blog-wrapper {
+        width: 60%;
+        left: 35%;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .blog-wrapper {
+        width: 70%;
+        left: 27%;
+    }
+}
+
+@media screen and (max-width: 459px) {
+    .blog-wrapper {
+        width: 70%;
+        left: 27%;
+    }
+}
+@media screen and (max-width: 375px) {
+    .blog-wrapper {
+        width: 80%;
+        left: 18%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    h1 {
+        font-size: 2.5em !important;
+    }
+
+    p.h1-subtitle-text {
+        font-size: 1.25em !important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    h1 {
+        font-size: 2.3em !important;
+    }
+
+    p.h1-subtitle-text {
+        font-size: 1.2em !important;
+    }
+}

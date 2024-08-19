@@ -1,0 +1,158 @@
+body {
+    background-color: #fdf8f4;
+}
+
+.love-outer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 150px;
+}
+
+.love-container {
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100%;
+    position: relative;
+    gap: 50px;
+}
+
+.title-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+    padding: 80px 0 50px;
+
+    * {
+        text-align: center;
+    }
+}
+
+.title-text {
+    text-transform: uppercase;
+}
+
+.love-container > section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+section a {
+    display: inline-block;
+}
+
+
+.sign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+    text-align: center;
+    width: calc(16.6% - 30px);
+}
+
+.sign-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    text-align: center;
+}
+
+.img-wrapper {
+    max-width: 200px;
+    max-height: 200px;
+}
+/*  */
+
+@media screen and (min-width: 1441px) {
+    .love-container{
+        width: 1300px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .love-container{
+        width: 960px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .love-container{
+        width: 86%;
+    }
+
+    .sign {
+        width: calc(33.33% - 30px);
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .sign {
+        width: calc(50% - 30px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1.title-text {
+        font-size: 3.3em !important;
+    }
+
+    .sign {
+        width: 100%
+    }
+
+    .img-wrapper {
+        min-width: 250px;
+        min-height: 250px;
+    }
+    .img-wrapper img {
+        width: 250px;
+        height: 250px;
+    }
+}
+@media screen and (max-width: 500px) {
+    h1.title-text {
+        font-size: 2.5em !important;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    h1.title-text {
+        font-size: 2.1em !important;
+    }
+}
+/*  */
+
+
+.img-wrapper > img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: .3s cubic-bezier(.45,0,.55,1);
+    transform: rotate(0deg);
+}
+
+
+.sign:hover {
+    img {
+        transition: .3s cubic-bezier(.45,0,.55,1);
+        transform: rotate(65deg) 
+    }
+}

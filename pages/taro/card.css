@@ -1,0 +1,220 @@
+body {
+    background-attachment: fixed;
+    background-clip: border-box;
+    background-color: rgb(7, 5, 6);
+    background-image: url(https://synastry.qodeinteractive.com/wp-content/uploads/2023/02/tarot-bcgr-img-1.jpg);
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.keys {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.keywords {
+    min-width: 42%;
+}
+
+@media screen and (max-width: 425px) {
+    .keywords {
+        min-width: 100%;
+    }
+}
+
+.sm-link i {
+    color: #936d42;
+    padding-top: 5px;
+}
+
+li.sm-link {
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #433e37;
+    display:flex;
+    align-items: center;
+}
+
+.card-img-wrapper img {
+    width: 250px;
+    background: transparent;
+
+}
+
+.card-info-wrapper {
+    width: 40%;
+}
+
+.share-reading-wrapper {
+    background-color: transparent;
+    width: 25%;
+}
+
+.card-info-wrapper p {
+    background: transparent;
+}
+
+.card-info-container {
+    margin-top: 100px;
+    position: relative;
+    width: 70%;
+    left:15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.sm-link a { 
+    font-family: "Cactus Classical Serif", serif !important;
+    margin-left: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.6em;
+}
+
+ul.links-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    margin-top: 26px;
+    background-color: transparent;;
+}
+
+h3.share-title {
+    background-color: transparent;
+    font-size: 2.2em;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(202, 157, 117);
+    text-transform: uppercase;
+    letter-spacing: .03em;
+}
+
+.card-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card-info-wrapper p {
+    display: block;
+}
+
+.keywords {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* card */
+
+.card-title {
+    font-size: 2.4em;
+    font-weight: 400;
+}
+
+h3.h3-title-text {
+    font-size: 1.6em;
+    font-weight: 400;
+}
+
+.card-title, h3.h3-title-text {
+    letter-spacing: 0.03em;
+    color: rgb(202, 157, 117);
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+
+.card-info-wrapper p, .card-info-wrapper span {
+    color: rgb(195, 190, 182);
+    font-size: 1.1em;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 1345px) {
+    .card-info-container {
+        width: 90%;
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .card-info-container {
+        width: 97%;
+        left: 1.5%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .card-info-container {
+        width: 90%;
+        left: 5%;
+        row-gap: 50px;
+        column-gap: auto;
+    }
+
+    .card-info-wrapper {
+        order: 2;
+        width: 60%;
+    }
+
+    .share-reading-wrapper {
+        order: 2;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .share-reading-wrapper ul {
+        margin-top: 28px;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .card-info-container { 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 25px;
+        margin-top: 25px;
+    }
+
+    .card-info-wrapper {
+        order: 2;
+        width: 100%;
+    }
+
+    .share-reading-wrapper {
+        order: 3;
+        width: 100%;
+    }
+
+    .card-img-wrapper {
+        order: 1;
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

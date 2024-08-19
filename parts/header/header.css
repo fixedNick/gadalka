@@ -1,0 +1,329 @@
+.burger {
+    display: none;
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    padding: 0 7px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.dark .burger {
+    border: 2px solid #fff;
+}
+
+.dark .burger span {
+    border-bottom: 2px solid #fff;
+}
+
+.light .burger {
+    border: 2px solid #000;
+}
+
+.light .burger span {
+    border-bottom: 2px solid #000;
+}
+
+.burger span {
+    position: absolute;
+    width: 18px;
+    border-radius: 10px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.burger span:nth-child(1) {
+    top: 10px;
+}
+.burger span:nth-child(2) {
+    top: 15px;
+}
+.burger span:nth-child(3) {
+    top: 20px;
+}
+
+.mobile-links {
+    transition: .4s;
+    display: none;
+}
+
+.header-wrapper {
+    transition: 0.2s, background-color 0s;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header.open > .header-wrapper {
+    transition: 0.2s, background-color 0s;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+}
+
+.header.open {
+    transition: 0.2s, background-color 0s;
+    height: 100vh;
+    z-index: 9999;
+    position: fixed;
+    width: 100vw;
+    align-items: flex-start;
+    justify-content: flex-start;
+    top: 0;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.dark .header.open {
+    background-color: rgb(18,18,18);
+}
+
+.light .header.open {
+    background-color: #fdf8f4;
+}
+
+.mobile-links {
+    width: 100%;
+}
+
+.links-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    row-gap: 50px;
+    column-gap: 49px;
+    border-top: 1px solid #936d42;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 110px);
+    padding: 30px 0 75px 0;
+    width: 100%;
+}
+
+/* IF MENU ITEMS TOO BIG - SET LI width to >= 45% and change media from 448 to higher*/
+
+.links-wrapper > li {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: flex-start;
+    width: 44%;
+}
+
+@media screen and (max-width: 448px) {
+    .links-wrapper {
+        justify-content: center;
+    }
+}
+
+.burger.open { 
+    padding: 0 6px;
+}
+
+.burger.open span {
+    width: 21px;
+}
+
+.burger.open span:nth-child(1) {
+    top: 15px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  
+.burger.open span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-50px);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.burger.open span:nth-child(3) {
+    top: 15px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+header.header {
+    transition: 0.2s, background-color 0s;
+    display: flex;
+    padding: 0 120px 0 80px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(147, 109, 66);
+    height: 110px;
+}
+
+header img {
+    max-height: 80px;
+}
+
+header.header ul.desktop-links {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+    position: relative;
+    height: 100%;
+    padding-inline-start: 0 !important;
+    margin: 0 !important;
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+    align-items: center;
+}
+
+.header > .nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header.header ul.desktop-links li {
+    display: flex;
+    column-gap: 15px;
+    align-items: baseline;
+    position: relative;
+    height: 100%;
+}
+
+header.header ul.desktop-links li svg {
+    transition: .3s;
+    transform: rotate(0);
+    color: #ca9d75;
+}
+
+.link-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+.s-icon {
+    overflow: hidden;
+}
+header.header ul.desktop-links li .link-wrapper a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    display: flex;
+    column-gap: 10px;
+}
+
+
+header.header ul.desktop-links li::after {
+    content: '';
+    transition: .4s ease-out;
+    display: inline-flex;
+    position: absolute;
+    width: 0%;
+    bottom: -1px;
+    border-bottom: 1px solid #936d42;
+}
+header.header ul.desktop-links li:hover::after{
+    transition: .4s ease-out;
+    width: 100%;
+}
+@media screen and (max-width: 1024px) {
+    header.header {
+        padding: 20px;
+        align-items: baseline;
+    }
+
+    header.header.open > .header-wrapper {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 862px) {
+    header.header img {
+        max-height: 70px;
+    }
+    header.header ul.desktop-links {
+        column-gap: 15px;
+    }
+    header.header ul.desktop-links li {
+        column-gap: 7px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .burger {
+        display: block;
+    }
+    header.header ul.desktop-links {
+        display: none;
+    }
+ 
+}
+
+.dropdown-menu {
+    transition: .3s;
+    display: none; 
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: absolute;
+    top: 100%;
+    margin-top: 1px;
+}
+
+.dark .dropdown-menu {
+    background-color: #141313;
+}
+
+.light .dropdown-menu {
+    background-color: #fdf8f4;
+}
+
+.dropdown-menu > .menu-wrapper {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    column-gap: 55px !important;
+    row-gap: 0 !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.dropdown-menu > .menu-wrapper > .menu-item {
+    width: 100%;
+}
+
+.dropdown-menu .learn-more-btn a {
+    font-size: 14px !important;
+    text-transform: capitalize !important;
+}
+
+.menu-link a {
+    display: inline-flex;
+}
+
+.menu-link:hover {
+    svg {
+        transition: .3s;
+        transform: rotate(90deg);
+    }
+}
