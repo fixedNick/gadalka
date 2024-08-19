@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /parts
+Disallow: /taro/parts
+Disallow: /php
+Disallow: /utils
+Disallow: */keywords.php
+Allow: /img/*
+Allow: /js/*
+Allow: /pages/*
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.jpeg
+Allow: /*.jpg
+Allow: /*.svg
+
+Sitemap: https://gadalka-taro.ru/sitemap.xml
