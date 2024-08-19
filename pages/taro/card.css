@@ -2,7 +2,7 @@ body {
     background-attachment: fixed;
     background-clip: border-box;
     background-color: rgb(7, 5, 6);
-    background-image: url(https://synastry.qodeinteractive.com/wp-content/uploads/2023/02/tarot-bcgr-img-1.jpg);
+    background-image: url('/img/card-bg.png');
     background-origin: padding-box;
     background-repeat: no-repeat;
     background-size: cover;
