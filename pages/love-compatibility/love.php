@@ -6,14 +6,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <? 
+        require_once($root.'/php/sign.php');
         include_once($root.'/utils/dc.php'); 
         include_once($root.'/parts/head.php'); 
+        include_once('keywords.php');
     
         $desc = 'Исследуйте любовную совместимость всех знаков Зодиака на нашей странице. Найдите идеальное партнерство, изучая подробные таблицы и анализ совместимости. Начните свое путешествие к гармоничным отношениям прямо сейчас!'; 
         $title = 'Любовная совместимость знаков Зодиака: Полная таблица и анализ | Знаки Зодиака';
 
         // Filling additional keywords for cards page
-        $additionalKeywords = ',';
+        $additionalKeywords = ',' . $love_keywords . ',';
+        $signs = Sign::GetSignArrayFromDB();
+        foreach ($signs as $key => $sign) {
+            $additionalKeywords .= 'совместимость' . $sign->name_ru . ',';
+            $additionalKeywords .= $sign->name_ru . ' совместимость,';
+            $additionalKeywords .= $sign->name_ru . ' любовный гороскоп,';
+
+            foreach($signs as $kkk => $sign2) {
+                $additionalKeywords .= 'совместимость ' . $sign->name_ru . ' и ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'любовная совместимость ' . $sign->name_ru . ' и ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'совместимость мужчины ' . $sign->name_ru . ' и женщины ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'любовная совместимость мужчины ' . $sign->name_ru . ' и женщины ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'совместимость женщины ' . $sign->name_ru . ' и мужчины ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'любовная совместимость женщины ' . $sign->name_ru . ' и мужчины ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'совместимость девушки ' . $sign->name_ru . ' и парня ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'любовная совместимость девушки ' . $sign->name_ru . ' и парня ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'совместимость парня ' . $sign->name_ru . ' и девушки ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'любовная совместимость парня ' . $sign->name_ru . ' и девушки ' . $sign2->name_ru . ',';
+            }
+        }
     ?>
     <meta name="DC.title" content="Gadalka | <?=$title?>">
     <meta name="DC.creator" content="kostudio">
@@ -74,9 +95,6 @@
                 <p class="h1-subtitle-text light-bg">Выбери свой знак зодиака</p>
             </div>
             <?
-                require_once($root.'/php/sign.php');
-
-                $signs = Sign::GetSignArrayFromDB();
 
                 echo '<section>';
                 $counter = 0;

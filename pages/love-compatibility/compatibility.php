@@ -29,14 +29,35 @@ foreach ($signs as $key => $value) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- seo -->
     <? 
+        require_once($root.'/php/sign.php');
         include_once($root.'/utils/dc.php'); 
         include_once($root.'/parts/head.php'); 
+        include_once('keywords.php');
     
         $desc = 'Откройте для себя секреты любовной совместимости для '.$selectedSign->name_ru.'. Наша страница предлагает глубокий анализ отношений с каждым из знаков Зодиака, помогая вам найти идеального партнера. Начните строить гармоничные отношения уже сегодня!'; 
         $title = 'Любовная совместимость '.$selectedSign->name_ru.': Подробный анализ партнерств | Знаки Зодиака';
 
         // Filling additional keywords for cards page
-        $additionalKeywords = ',';
+        $additionalKeywords = ',' . $love_keywords . ',';
+        $signs = Sign::GetSignArrayFromDB();
+        foreach ($signs as $key => $sign) {
+            $additionalKeywords .= 'совместимость' . $sign->name_ru . ',';
+            $additionalKeywords .= $sign->name_ru . ' совместимость,';
+            $additionalKeywords .= $sign->name_ru . ' любовный гороскоп,';
+
+            foreach($signs as $kkk => $sign2) {
+                $additionalKeywords .= 'совместимость ' . $sign->name_ru . ' и ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'любовная совместимость ' . $sign->name_ru . ' и ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'совместимость мужчины ' . $sign->name_ru . ' и женщины ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'любовная совместимость мужчины ' . $sign->name_ru . ' и женщины ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'совместимость женщины ' . $sign->name_ru . ' и мужчины ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'любовная совместимость женщины ' . $sign->name_ru . ' и мужчины ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'совместимость девушки ' . $sign->name_ru . ' и парня ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'любовная совместимость девушки ' . $sign->name_ru . ' и парня ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'совместимость парня ' . $sign->name_ru . ' и девушки ' . $sign2->name_ru . ',';
+                $additionalKeywords .= 'любовная совместимость парня ' . $sign->name_ru . ' и девушки ' . $sign2->name_ru . ',';
+            }
+        }
     ?>
     <meta name="DC.title" content="Gadalka | <?=$title?>">
     <meta name="DC.creator" content="kostudio">

@@ -8,12 +8,13 @@
     <? 
         include_once($root.'/utils/dc.php'); 
         include_once($root.'/parts/head.php'); 
+        include_once('keywords.php');
         $year = date_format(new DateTime(), "Y");
         $desc = 'Получите точные и актуальные гороскопы на каждый день, месяц и весь '.$year.' год для всех знаков Зодиака. Наша страница предлагает подробные астрологические прогнозы, которые помогут вам спланировать свою жизнь и принять важные решения.'; 
         $title = 'Гороскоп на '.$year.' год: На день, На месяц, На год Прогноз для всех Знаков Зодиака';
 
         // Filling additional keywords for cards page
-        $additionalKeywords = ',';
+        $additionalKeywords = ',' . $horoscope_keywords;
     ?>
     <meta name="DC.title" content="Gadalka | <?=$title?>">
     <meta name="DC.creator" content="kostudio">
