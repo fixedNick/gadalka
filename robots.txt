@@ -4,6 +4,7 @@ Disallow: /taro/parts
 Disallow: /php
 Disallow: /utils
 Disallow: */keywords.php
+Disallow: /pages/blog/sidebar.php
 Allow: /img/*
 Allow: /js/*
 Allow: /pages/*

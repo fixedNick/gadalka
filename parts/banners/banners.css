@@ -1,0 +1,34 @@
+
+.banners {
+    margin-top: 50px;
+}
+
+.love-comp-banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.love-comp-banner .btn {
+    position: absolute;
+    bottom: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    width: 85%;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, .5);
+    box-shadow: 2px 9px 7px rgba(255, 255, 255, .45), -7px 1px 7px rgba(255, 255, 255, .45);
+}
+
+.love-comp-banner .btn a {
+    font-size: 1em !important;
+    font-family: "Rubik", sans-serif !important;
+    font-weight: 500 !important;
+    line-height: 1.5em;
+}
+
+.white-btn {
+    background-color: white;
+}

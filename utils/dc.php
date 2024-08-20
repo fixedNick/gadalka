@@ -1,8 +1,8 @@
 <?php
     $baseIdentifier = "https://gadalka-taro.ru/";
 
-    $author = "kostudio";
-    $publisher_website = "https://kostudio.pw/";
+    $author = "VConas";
+    $publisher_website = "https://vconas.pw/";
 
     $keywords = "таро,
     гадание,

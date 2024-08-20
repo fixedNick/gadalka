@@ -1,0 +1,28 @@
+.post-image {
+    max-height: unset;
+}
+.post h1 {
+    margin-top: 20px;
+    font-size: 3em;
+}
+
+.article-content {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.post-image .post-date {
+    opacity: 1;
+}
+
+.post:hover {
+    cursor: default;
+    .post-date {
+        opacity: unset;
+    }
+    .post-image img {
+        transform: unset;
+    }
+}
