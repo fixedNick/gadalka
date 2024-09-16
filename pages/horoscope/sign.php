@@ -176,6 +176,7 @@ else if($_GET['on'] == 'year') {
                 echo $openTag . $row->text . "</$row->tag>";
             }
         ?>
+        <hr>
     </div>
 
     <div class="more-signs" itemscope itemtype="http://schema.org/ItemList">

@@ -1,4 +1,9 @@
 <?
+if(isset($_GET['h']) && !empty($_GET['h'])){
+    $hash = $_GET['h'];
+} else {
+    header('Location: /pages/blog/blog.php');
+}
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 ?>
 <!DOCTYPE html>
@@ -62,6 +67,9 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
     <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="article.css">
 
+    <!-- js -->
+    <script src="/js/blog-media.js"></script>
+
     <title>Gadalka | <?=$title?></title>
 </head>
 <body class="light">
@@ -69,29 +77,69 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
         require_once($root.'/parts/header/header.php');
     ?>
 
+    <?
+        require_once($root.'/php/article.php');
+        
+        $article = Article::GetArticleByHash($hash);
+    ?>
+
     <div class="main-wrapper">
         <div class="blog-section">
             <div class="post">
                 <div class="post-image">
                     <div class="img-wrapper">
-                        <img src="https://synastry.qodeinteractive.com/wp-content/uploads/2023/03/blog-sidebar-img.jpg" alt="">
+                        <img src="<?=$article->Image?>" alt="">
                     </div>
-                    <div class="post-date">АВГУСТ 08, 2024</div>
+                    <div class="post-date"><?=date('M d, Y', $article->CreateTimestamp)?></div>
                 </div>
                 <div class="post-tags">
-                    <a href="/"><div class="post-tag">Таро</div></a>
-                    <a href="/"><div class="post-tag">Астрология</div></a>
-                    <a href="/"><div class="post-tag">Гороскопы</div></a>
+                    <?foreach($article->Categories as $category) {?>
+                        <a href="/"><div class="post-tag"><?=$category[1]?></div></a>
+                    <?}?>
                 </div>
-                <h1 class="title-text">ЗНАЧЕНИЕ САТУРНА В ПЯТОМ ДОМЕ ДЛЯ СКОРПИОНОВ И СТРЕЛЬЦОВ</h1>
+                <h1 class="title-text"><?=$article->Header?></h1>
                 <div class="article-content">
-                    <p class="h1-subtitle-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illum necessitatibus fugit, consectetur dignissimos perferendis eligendi asperiores quasi veritatis debitis rem incidunt deleniti culpa obcaecati quae voluptatum, aliquid odit aperiam.</p>
-                    <p class="h1-subtitle-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illum necessitatibus fugit, consectetur dignissimos perferendis eligendi asperiores quasi veritatis debitis rem incidunt deleniti culpa obcaecati quae voluptatum, aliquid odit aperiam.</p>
-                    <p class="h1-subtitle-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illum necessitatibus fugit, consectetur dignissimos perferendis eligendi asperiores quasi veritatis debitis rem incidunt deleniti culpa obcaecati quae voluptatum, aliquid odit aperiam.</p>
-                    <p class="h1-subtitle-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illum necessitatibus fugit, consectetur dignissimos perferendis eligendi asperiores quasi veritatis debitis rem incidunt deleniti culpa obcaecati quae voluptatum, aliquid odit aperiam.</p>
-                    <p class="h1-subtitle-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illum necessitatibus fugit, consectetur dignissimos perferendis eligendi asperiores quasi veritatis debitis rem incidunt deleniti culpa obcaecati quae voluptatum, aliquid odit aperiam.</p>
-                    <p class="h1-subtitle-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illum necessitatibus fugit, consectetur dignissimos perferendis eligendi asperiores quasi veritatis debitis rem incidunt deleniti culpa obcaecati quae voluptatum, aliquid odit aperiam.</p>
+
+                    <?
+                        foreach($article->Body as $paragraph) {
+                            if($paragraph->Tag == 'p' || $paragraph->Tag == 'h4' || $paragraph->Tag == 'h2' || $paragraph->Tag == 'h3' || $paragraph->Tag == 'blockquote') {
+                                echo '<' . $paragraph->Tag . ' class="'.$paragraph->ClassList.'">' . $paragraph->Content . '</' . $paragraph->Tag . '>';
+                            }
+
+                            if($paragraph->Tag == 'div' && str_contains($paragraph->ClassList, 'double-image')) {
+                                echo '<div class="double-image">';
+                                foreach(explode(',', $paragraph->Content) as $img) {
+                                    echo '<div class="img-wrapper"><img src="' . $img . '" alt=""></div>';
+                                }
+                                echo '</div>';
+                            }
+                        }
+                    ?>
+                        
+                    <!-- <div class="double-image">
+                        <div class="img-wrapper">
+                            <img src="" alt="">
+                            <div class="img-subtitle"><p class="h4-subtitle-text">"Карта Перевернутый Дурак"</p></div>
+                        </div>
+                        <div class="img-wrapper">
+                            <img src="" alt="">
+                            <div class="img-subtitle"><p class="h4-subtitle-text">"Перевернутая Карта Туз Пентаклей"</p></div>
+                        </div>
+                    </div> -->
                 </div>
+                <hr>
+                <div class="article-info">
+                    <div class="post-tags">
+                        <?foreach($article->Categories as $category) {?>
+                            <a href="/"><div class="post-tag"><?=$category[1]?></div></a>
+                        <?}?>
+                    </div>
+                    <div class="share">
+                        ПОДЕЛИТЬСЯ
+                        <i class="fa-brands fa-telegram"></i><i class="fa-brands fa-vk"></i><i class="fa-brands fa-odnoklassniki"></i>
+                    </div>
+                </div>
+
             </div>
         </div>
         <?php require_once('sidebar.php');?>

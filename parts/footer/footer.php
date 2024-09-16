@@ -42,7 +42,7 @@
                 <img src="/img/logo.png" alt="Таро Онлайн Гадалка Логотип" title="Таро Онлайн Гадалка Логотип" itemprop="logo">
             </a>
         </div>
-        <p class="h4-subtitle-text ">© kostudio production 2024. Все права защищены.</p>
+        <p class="h4-subtitle-text ">&copy; 2024 VConas Inc. <a href="https://opensource.org/license/mit">The MIT License</a></p>
     </div>
 </footer>
 

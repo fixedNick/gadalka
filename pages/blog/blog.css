@@ -137,6 +137,10 @@
     margin-top: 75px;
 }
 
+.blog-section .popular-posts h3 {
+    margin-bottom: 30px;
+}
+
 .sidebar h3 {
     font-size: 1.3em !important;
     margin-top: 15px;
@@ -165,6 +169,7 @@
         border: unset;
         padding: unset;
         order: 1;
+        margin: 0 0 50px 0;
     }
     .blog-section {
         padding: unset;
@@ -190,5 +195,22 @@
 
     .banners .btn {
         width: 250px;
+    }
+}
+
+@media screen and (max-width: 700px) and (min-width: 600px) {
+    .popular-posts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    .popular-posts .post h3 {
+        font-size: 1.5em;
+    }
+
+    .post {
+        flex-basis: calc(50% - 20px);
     }
 }
