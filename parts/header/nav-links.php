@@ -44,7 +44,7 @@ $links = [
         new Link('Любовная Астрология'),
         new Link('Таро'),
         new Link('Знаки зодиака'),
-    ], '/pages/taro/blog.php', LinkPlace::$Both),
+    ], '/pages/blog/blog.php', LinkPlace::$Both),
     new Link('Гадание', [
         new Link('Гадание на любовь'),
         new Link('Гадание на финансы'),
