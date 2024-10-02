@@ -2,7 +2,7 @@
 if(isset($_GET['h']) && !empty($_GET['h'])){
     $hash = $_GET['h'];
 } else {
-    header('Location: /pages/blog/blog.php');
+    header('Location: /blog');
 }
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 ?>
@@ -64,8 +64,8 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 	<link rel="stylesheet" href="..\..\parts/css-normalize.css">
 	<link rel="stylesheet" href="..\..\parts/banners/banners.css">
 	<link rel="stylesheet" href="/main.css">
-    <link rel="stylesheet" href="blog.css">
-    <link rel="stylesheet" href="article.css">
+    <link rel="stylesheet" href="/pages/blog/blog.css">
+    <link rel="stylesheet" href="/pages/blog/article.css">
 
     <!-- js -->
     <script src="/js/blog-media.js"></script>
