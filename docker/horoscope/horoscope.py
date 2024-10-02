@@ -9,6 +9,8 @@ from selenium.webdriver.chrome.service import Service
 import mysql.connector
 import requests
 from bs4 import BeautifulSoup as bs
+import signal
+import sys
 import time
 import os
 import json
@@ -21,7 +23,11 @@ PERIOD_MONTH = 2
 PERIOD_YEAR = 3
 
 def log(text: str) -> None:
-    print(f'[{time.strftime("%d-%m-%Y %H:%M:%S")}] {text}')
+    log_text = f'[{time.strftime("%d-%m-%Y %H:%M:%S")}] {text}'
+    print(log_text)
+    # write log into file logs.txt
+    with open('logs.txt', 'a') as file:
+        file.write(log_text)
 
 class Config:
     config_path = 'config.json'
@@ -219,8 +225,13 @@ def main():
     config = Config()
     config.ReadConfig()
 
-    service = Service(executable_path="/app/chromedriver")
-    driver = uc.Chrome(headless=True, no_sandbox=True, port=9515, service=service)
+    try:
+        service = Service(executable_path="/app/chromedriver")
+        driver = uc.Chrome(headless=True, no_sandbox=True, port=9515, service=service)
+    except Exception as e:
+        log(f"Error on starting Chrome: {e}")
+        exit(1)
+        return
 
     GPTAuth(driver, os.getenv('API_USERNAME'), os.getenv('API_PASSWORD'))
 
@@ -282,5 +293,7 @@ def main():
     driver.quit()
 
 if __name__ == "__main__":
+    log('Horoscope Microservice started. Waiting for db startup...')
     r = asyncio.run(wait_for_it.wait_for_it._wait_until_available(os.getenv('dbhost'), 3306))
+    log('DB started. Starting horoscope microservice...')
     main()

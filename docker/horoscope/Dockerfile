@@ -34,6 +34,5 @@ RUN . /etc/venv/bin/activate && pip3 install --no-cache-dir -r requirements.txt
 # Копируем все файлы проекта в контейнер
 COPY . .
 
-
 # Команда для запуска скрипта
 CMD ["sh", "-c", ". /etc/venv/bin/activate && python3 horoscope.py"]

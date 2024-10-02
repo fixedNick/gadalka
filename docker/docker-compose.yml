@@ -1,5 +1,3 @@
-version: '3.8'
-
 networks:
   dev:
 
@@ -24,9 +22,11 @@ services:
     command: --innodb_flush_log_at_trx_commit=2 --sync_binlog=0 --innodb_buffer_pool_size=1G
     restart: always
 
-  horoscope_microservice:
+  horoscope:
     build: ./horoscope
-    container_name: HoroscopeMicroservices
+    container_name: horoscope
+    networks:
+      - dev
     environment:
       - API_USERNAME=kos.channel@yandex.ru
       - API_PASSWORD=NJdwebnkiJBS1wned3
@@ -37,7 +37,9 @@ services:
     volumes:
       - ./horoscope:/app
       - ./horoscope/config.json:/app/config.json
+      - ./horoscope/logs.txt:/app/logs.txt
     command: sh -c ". /etc/venv/bin/activate && python3 horoscope.py"
+    restart: always
   
   web:
     image: nginx:latest
