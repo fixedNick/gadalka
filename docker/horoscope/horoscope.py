@@ -27,7 +27,7 @@ def log(text: str) -> None:
     print(log_text)
     # write log into file logs.txt
     with open('logs.txt', 'a') as file:
-        file.write(log_text)
+        file.write(log_text + '\n')
 
 class Config:
     config_path = 'config.json'
