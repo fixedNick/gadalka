@@ -26,7 +26,7 @@ if (isset($_GET['page']) && $_GET['page'] >= 1)
         $title = 'Все Карты Таро в Одном Месте: Детальные Описания и Их Значения';
 
         // Filling additional keywords for cards page
-        require_once($root.'/php/Card.php');
+        require_once($root.'/php/card.php');
         $ru_names = Card::GetAllRuNames();
 
         $additionalKeywords = ',';
