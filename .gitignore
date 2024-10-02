@@ -1,3 +1,3 @@
 docker/venv
 docker/mysql-data
-docker/*/chromedriver
+# docker/*/chromedriver
