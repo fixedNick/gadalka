@@ -44,6 +44,7 @@
 	<!-- js -->
 
 	<script src="js/sky.js"></script>
+	<script src="js/cards-view.js"></script>
 	<script src="js/card-choose.js"></script>
 
 	<!-- end js -->
@@ -52,10 +53,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css" integrity="sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Cactus+Classical+Serif&family=Forum&display=swap" rel="stylesheet">
 
 	<!-- end fonts -->
 
@@ -70,24 +68,20 @@
 <body class="dark">
 	<? require_once('parts/header/header.php'); ?>
 
-    <div class="cards-wrapper">
-        <?
-            for ($i=1; $i <= 8; $i++) { 
-                ?>
-                <span class="taro-card card<?=$i?>">
-                    <img src="/img/card-back.png" alt="Карты таро" title="Карты таро">
+    <div class="bg-stars taro-section">
+        <div class="t-wrapper">
+            <h1 class="title-text">ЧТО ЖДЕТ ТЕБЯ СЕГОДНЯ? УЗНАЙ С ПОМОЩЬЮ КАРТ ТАРО!</h1>
+            <p class="h1-subtitle-text">Открой для себя новые возможности дня: выбери карту Таро и узнай предсказание!</p>
+        </div>
+        <div class="c-wrapper">
+            <?
+                for($i=1; $i <= 8; $i++)
+                {?>
+                <span class="t-card">
+                    <img src="/img/card-back.png" alt="Карты таро" title="Карта таро">
                 </span>
-                <?
-            }
-        ?> 
-    </div>
-
-    <div class="bg-stars taro-cards-section">
-        <div class="taro-cards">
-            <div class="text-wrapper">
-                <h1 class="title-text dark-bg">ЧТО ЖДЕТ ТЕБЯ СЕГОДНЯ? УЗНАЙ С ПОМОЩЬЮ КАРТ ТАРО!</h1>
-                <p class="h1-subtitle-text dark-bg">Открой для себя новые возможности дня: выбери карту Таро и узнай предсказание!</p>
-            </div>
+                <?}
+            ?>
         </div>
     </div>
 

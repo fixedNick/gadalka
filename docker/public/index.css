@@ -1,30 +1,29 @@
-html {
-    overflow-x: hidden;
+.taro-section {
+	height: calc(100vh - 110px);
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
 }
-
-body {
-    background-color: rgb(7, 5, 6);
-}
-
-.bg-stars.taro-cards-section {
-    display: flex;
-    width: 100%;
-    position: relative;
-    min-height: calc(100vh - 110px);
-    flex-direction: column;
-}
-
-.cards-wrapper {
-	position: absolute;
+.t-wrapper {
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100vw;
-	height: 100vh;
-	bottom: -75vh;
-	z-index: 18;
+	text-align: center;
+	flex-direction: column;
 }
 
-.taro-card {
+
+.c-wrapper {
+	max-height: 40vh;
+	height: 40vh;
+	position: relative;
+}
+
+.t-card {
+	top: 0;
 	position: absolute;
-	left: 10%;
 	width: 342px;
 	height: 564px;
 	transition: .3s;
@@ -33,187 +32,17 @@ body {
 	margin-bottom: 0px;
 	cursor: pointer;
 }
-.taro-card.card1 {
-	left: 10vw;
+
+.t-card:hover {
+	transition: .3s;
+	top: -50px;
 }
-.taro-card.card8 {
-	left: 69.5vw;
-}
-.taro-card.card2 {
-	left: 18.5vw;
-}
-.taro-card.card3 {
-	left: 27vw;
-}
-.taro-card.card4 {
-	left: 35.5vw;
-}
-.taro-card.card5 {
-	left: 44vw;
-}
-.taro-card.card6 {
-	left: 52.5vw;
-}		
-.taro-card.card7 {
-	left: 61vw;
+html {
+    overflow-x: hidden;
 }
 
-@media screen and (max-width: 1368px) {
-	.taro-card.card1 {
-		left: 10vw;
-	}
-	.taro-card.card8 {
-		left: 63.5vw;
-	}
-	.taro-card.card2 {
-		left: 17.6vw;
-	}
-	.taro-card.card3 {
-		left: 25.2vw;
-	}
-	.taro-card.card4 {
-		left: 33.6vw;
-	}
-	.taro-card.card5 {
-		left: 41.2vw;
-	}
-	.taro-card.card6 {
-		left: 48.8vw;
-	}
-	.taro-card.card7 {
-		left: 56.2vw;
-	}
-}
-
-@media screen and (max-width: 1090px) {
-	.taro-card.card1 {
-		left: 10vw;
-	}
-	.taro-card.card2 {
-		left: 16.8vw;
-	}
-	.taro-card.card3 {
-		left: 25.6vw;
-	}
-	.taro-card.card4 {
-		left: 32.4vw;
-	}
-	.taro-card.card5 {
-		left: 39.2vw;
-	}
-	.taro-card.card6 {
-		left: 46vw;
-	}
-	.taro-card.card7 {
-		left: 52.8vw;
-	}
-	.taro-card.card8 {
-		left: 59.6vw;
-	}
-	@media screen and (max-height: 540px) {
-		.taro-cards > .text-wrapper {
-			padding-top: 5% !important;
-		}
-		.taro-cards > .text-wrapper > h1 {
-			font-size: 2em !important;
-		}
-		.taro-cards > .text-wrapper > p {
-			font-size: 1.15em !important;
-		}
-	}
-
-	@media screen and (max-height: 453px) {
-		.taro-cards > .text-wrapper {
-			padding-top: 2.5% !important;
-		}
-		.cards-wrapper {
-			bottom: -80vh;
-		}
-	}
-}
-
-
-@media screen and (max-width: 915px) {
-	.taro-card.card1 {
-		left: 10vw;
-	}
-	.taro-card.card2 {
-		left: 15.7vw;
-	}
-	.taro-card.card3 {
-		left: 21.4vw;
-	}
-	.taro-card.card4 {
-		left: 27.1vw;
-	}
-	.taro-card.card5 {
-		left: 32.8vw;
-	}
-	.taro-card.card6 {
-		left: 38.5vw;
-	}
-	.taro-card.card7 {
-		left: 44.2vw;
-	}
-	.taro-card.card8 {
-		left: 50vw;
-	}
-}
-
-@media screen and (max-width: 750px) {
-	.taro-card.card1 {
-		left: 10vw;
-	}
-	.taro-card.card2 {
-		left: 14.2vw;
-	}
-	.taro-card.card3 {
-		left: 18.4vw;
-	}
-	.taro-card.card4 {
-		left: 22.6vw;
-	}
-	.taro-card.card5 {
-		left: 26.8vw;
-	}
-	.taro-card.card6 {
-		left: 30.9vw;
-	}
-	.taro-card.card7 {
-		left: 34.1vw;
-	}
-	.taro-card.card8 {
-		left: 40vw;
-	}
-	@media screen and (max-height: 342px) {
-		.taro-cards > .text-wrapper {
-			padding-top: 1% !important;
-		}
-		.taro-cards > .text-wrapper > h1 {
-			font-size: 1.7em !important;
-		}
-		.taro-cards > .text-wrapper > p {
-			font-size: 1.05em !important;
-		}
-	}
-}
-
-.taro-cards {
-    position: relative;
-    width: 100%;
-    z-index: 15;
-    width: 95%;
-    left: 2.5%;
-}
-
-.taro-cards > .text-wrapper {
-    padding-top: 10%;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+body {
+    background-color: rgb(7, 5, 6);
 }
 
 .zodiac-sign .img-wrapper {
@@ -233,128 +62,12 @@ body {
 		font-size: 2.9em !important;
     }
 }
-@media screen and (max-width: 610px) {
-.taro-cards h1 {
-	font-size: 2.5em !important;
-	}
-	
-	.cards-wrapper {
-		bottom: 0;
-		display: flex;
-		justify-content: center;
-	}
-	.taro-card {
-		left: auto !important;
-	}
-
-	.taro-card.card1 {
-		top: 45vh;
-	}
-	.taro-card.card2 {
-		top: 50vh;
-	}
-	.taro-card.card3 {
-		top: 55vh;
-	}
-	.taro-card.card4 {
-		top: 60vh;
-	}
-	.taro-card.card5 {
-		top: 65vh;
-	}
-	.taro-card.card6 {
-		top: 70vh;
-	}
-	.taro-card.card7 {
-		top: 75vh;
-	}
-	.taro-card.card8 {
-		top: 80vh;
-	}
-	@media screen and (max-height: 1024px) {
-		.cards-wrapper {
-			bottom: -12vh !important;
-		}
-		.taro-card {
-			width: 300px !important;
-		}
-
-		.taro-cards > .text-wrapper {
-			padding-top: 3% !important;
-		}
-		.taro-cards > .text-wrapper > h1 {
-			font-size: 2em !important;
-		}
-	}
-
-	@media screen and (max-height: 794px) {
-		.taro-cards > .text-wrapper {
-			padding-top: 2%;
-		}
-		.taro-cards > .text-wrapper > h1 {
-			font-size: 2em !important;
-		}
-		.taro-cards > .text-wrapper > p {
-			font-size: 1.15em !important;
-		}
-	}
-	@media screen and (max-height: 440px) {
-		.cards-wrapper {
-			bottom: -29vh !important;
-		}
-	}
-	@media screen and (max-height: 320px) {
-		.cards-wrapper {
-			bottom: -37vh !important;
-		}
-	}
-}
-
-@media screen and (max-width: 560px) {
-	@media screen and (max-height: 564px) {
-		.cards-wrapper {
-			bottom: -29vh !important;
-		}
-	}
-}
-
-@media screen and (max-width: 360px) {
-	@media screen and (max-height: 700px) {
-		.taro-cards > .text-wrapper {
-			padding-top: 1% !important;
-		}
-		.taro-cards > .text-wrapper > h1 {
-			font-size: 1.7em !important;
-		}
-		.taro-cards > .text-wrapper > p {
-			font-size: 1.05em !important;
-		}	
-	}
-
-	@media screen and (max-height: 550px) {
-		.cards-wrapper {
-			bottom: -15vh !important;
-		}
-		.taro-cards > .text-wrapper > h1 {
-			font-size: 1.5em !important;
-		}
-		.taro-cards > .text-wrapper > p {
-			font-size: 1.05em !important;
-		}	
-	}
-
-	@media screen and (max-height: 500px) {
-		.cards-wrapper {
-			bottom: -29vh !important;
-		}
-	}
-}
 
 .card-clicked {
 	pointer-events: none;
 }
 
-.taro-card >img {
+.t-card >img {
 	background: transparent;
 	object-fit: cover;
 }
@@ -939,4 +652,16 @@ select::selection {
     p.h1-subtitle-text {
         font-size: 1.2em !important;
     }
+}
+
+@media screen and (max-width: 610px) {
+	.t-wrapper h1.title-text {
+		font-size: xx-large !important;
+
+	}
+	.c-wrapper {
+		display: flex;
+		justify-content: center;	
+		height: 50vh;
+	}
 }

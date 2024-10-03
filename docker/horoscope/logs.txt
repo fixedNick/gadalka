@@ -1,1 +1,70 @@
-[02-10-2024 22:29:08] Horoscope Microservice started. Waiting for db startup...[02-10-2024 22:31:40] Horoscope Microservice started. Waiting for db startup...[02-10-2024 22:32:13] DB started. Starting horoscope microservice...[02-10-2024 22:32:13] Horoscope Microservice STARTED[02-10-2024 22:32:13] Loading config from config.json[02-10-2024 22:32:13] Required to update horoscope for month[02-10-2024 22:32:13] Required to update horoscope for day[02-10-2024 22:32:13] Config successfully loaded
+[02-10-2024 22:29:08] Horoscope Microservice started. Waiting for db startup...[02-10-2024 22:31:40] Horoscope Microservice started. Waiting for db startup...[02-10-2024 22:32:13] DB started. Starting horoscope microservice...[02-10-2024 22:32:13] Horoscope Microservice STARTED[02-10-2024 22:32:13] Loading config from config.json[02-10-2024 22:32:13] Required to update horoscope for month[02-10-2024 22:32:13] Required to update horoscope for day[02-10-2024 22:32:13] Config successfully loaded[02-10-2024 23:17:08] Horoscope Microservice started. Waiting for db startup...
+[02-10-2024 23:17:14] DB started. Starting horoscope microservice...
+[02-10-2024 23:17:14] Horoscope Microservice STARTED
+[02-10-2024 23:17:14] Loading config from config.json
+[02-10-2024 23:17:14] Required to update horoscope for month
+[02-10-2024 23:17:14] Required to update horoscope for day
+[02-10-2024 23:17:14] Config successfully loaded
+[02-10-2024 23:18:12] Cleared period for `овен/aries`[1] on DAY.
+[02-10-2024 23:18:12] Added horoscope for `овен/aries`[1] on DAY. Total paragragps: 2
+[02-10-2024 23:19:16] Cleared period for `овен/aries`[1] on MONTH.
+[02-10-2024 23:19:16] Added horoscope for `овен/aries`[1] on MONTH. Total paragragps: 3
+[02-10-2024 23:19:58] Cleared period for `телец/taurus`[2] on DAY.
+[02-10-2024 23:19:58] Added horoscope for `телец/taurus`[2] on DAY. Total paragragps: 2
+[02-10-2024 23:20:55] Cleared period for `телец/taurus`[2] on MONTH.
+[02-10-2024 23:20:55] Added horoscope for `телец/taurus`[2] on MONTH. Total paragragps: 3
+[02-10-2024 23:21:39] Cleared period for `близнецы/gemini`[3] on DAY.
+[02-10-2024 23:21:40] Added horoscope for `близнецы/gemini`[3] on DAY. Total paragragps: 2
+[02-10-2024 23:22:30] Cleared period for `близнецы/gemini`[3] on MONTH.
+[02-10-2024 23:22:30] Added horoscope for `близнецы/gemini`[3] on MONTH. Total paragragps: 3
+[02-10-2024 23:23:04] Cleared period for `рак/cancer`[4] on DAY.
+[02-10-2024 23:23:04] Added horoscope for `рак/cancer`[4] on DAY. Total paragragps: 2
+[02-10-2024 23:24:01] Cleared period for `рак/cancer`[4] on MONTH.
+[02-10-2024 23:24:02] Added horoscope for `рак/cancer`[4] on MONTH. Total paragragps: 3
+[02-10-2024 23:24:39] Cleared period for `лев/leo`[5] on DAY.
+[02-10-2024 23:24:39] Added horoscope for `лев/leo`[5] on DAY. Total paragragps: 2
+[02-10-2024 23:25:29] Cleared period for `лев/leo`[5] on MONTH.
+[02-10-2024 23:25:30] Added horoscope for `лев/leo`[5] on MONTH. Total paragragps: 3
+[02-10-2024 23:26:06] Cleared period for `дева/virgo`[6] on DAY.
+[02-10-2024 23:26:06] Added horoscope for `дева/virgo`[6] on DAY. Total paragragps: 2
+[02-10-2024 23:26:55] Cleared period for `дева/virgo`[6] on MONTH.
+[02-10-2024 23:26:55] Added horoscope for `дева/virgo`[6] on MONTH. Total paragragps: 3
+[02-10-2024 23:27:28] Cleared period for `весы/libra`[7] on DAY.
+[02-10-2024 23:27:28] Added horoscope for `весы/libra`[7] on DAY. Total paragragps: 2
+[02-10-2024 23:28:21] Cleared period for `весы/libra`[7] on MONTH.
+[02-10-2024 23:28:21] Added horoscope for `весы/libra`[7] on MONTH. Total paragragps: 3
+[02-10-2024 23:28:56] Cleared period for `скорпион/scorpio`[8] on DAY.
+[02-10-2024 23:28:56] Added horoscope for `скорпион/scorpio`[8] on DAY. Total paragragps: 2
+[02-10-2024 23:29:44] Cleared period for `скорпион/scorpio`[8] on MONTH.
+[02-10-2024 23:29:45] Added horoscope for `скорпион/scorpio`[8] on MONTH. Total paragragps: 3
+[02-10-2024 23:30:21] Cleared period for `стрелец/sagittarius`[9] on DAY.
+[02-10-2024 23:30:21] Added horoscope for `стрелец/sagittarius`[9] on DAY. Total paragragps: 2
+[02-10-2024 23:31:07] Cleared period for `стрелец/sagittarius`[9] on MONTH.
+[02-10-2024 23:31:07] Added horoscope for `стрелец/sagittarius`[9] on MONTH. Total paragragps: 3
+[02-10-2024 23:31:42] Cleared period for `козерог/capricorn`[10] on DAY.
+[02-10-2024 23:31:42] Added horoscope for `козерог/capricorn`[10] on DAY. Total paragragps: 2
+[02-10-2024 23:32:30] Cleared period for `козерог/capricorn`[10] on MONTH.
+[02-10-2024 23:32:31] Added horoscope for `козерог/capricorn`[10] on MONTH. Total paragragps: 3
+[02-10-2024 23:33:05] Cleared period for `водолей/aquarius`[11] on DAY.
+[02-10-2024 23:33:06] Added horoscope for `водолей/aquarius`[11] on DAY. Total paragragps: 2
+[02-10-2024 23:33:50] Cleared period for `водолей/aquarius`[11] on MONTH.
+[02-10-2024 23:33:50] Added horoscope for `водолей/aquarius`[11] on MONTH. Total paragragps: 3
+[02-10-2024 23:34:24] Cleared period for `рыбы/pisces`[12] on DAY.
+[02-10-2024 23:34:24] Added horoscope for `рыбы/pisces`[12] on DAY. Total paragragps: 2
+[02-10-2024 23:35:15] Cleared period for `рыбы/pisces`[12] on MONTH.
+[02-10-2024 23:35:16] Added horoscope for `рыбы/pisces`[12] on MONTH. Total paragragps: 3
+[02-10-2024 23:35:20] Horoscope Microservice started. Waiting for db startup...
+[02-10-2024 23:35:20] DB started. Starting horoscope microservice...
+[02-10-2024 23:35:20] Horoscope Microservice STARTED
+[02-10-2024 23:35:20] Loading config from config.json
+[02-10-2024 23:35:20] Config loaded. No need to update horoscope
+[02-10-2024 23:35:37] Horoscope Microservice started. Waiting for db startup...
+[02-10-2024 23:35:37] DB started. Starting horoscope microservice...
+[02-10-2024 23:35:37] Horoscope Microservice STARTED
+[02-10-2024 23:35:37] Loading config from config.json
+[02-10-2024 23:35:37] Config loaded. No need to update horoscope
+[02-10-2024 23:35:50] Horoscope Microservice started. Waiting for db startup...
+[02-10-2024 23:35:50] DB started. Starting horoscope microservice...
+[02-10-2024 23:35:50] Horoscope Microservice STARTED
+[02-10-2024 23:35:50] Loading config from config.json
+[02-10-2024 23:35:50] Config loaded. No need to update horoscope

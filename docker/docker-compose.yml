@@ -39,7 +39,6 @@ services:
       - ./horoscope/config.json:/app/config.json
       - ./horoscope/logs.txt:/app/logs.txt
     command: sh -c ". /etc/venv/bin/activate && python3 horoscope.py"
-    restart: always
   
   web:
     image: nginx:latest
