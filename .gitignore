@@ -1,3 +1,4 @@
 docker/venv
 docker/mysql-data
-# docker/*/chromedriver
+docker/horoscope/config.json
+docker/horoscope/logs.txt

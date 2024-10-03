@@ -23,6 +23,10 @@ PERIOD_MONTH = 2
 PERIOD_YEAR = 3
 
 def log(text: str) -> None:
+    # if file logs.txt not exists create it
+    if not os.path.exists('logs.txt'):
+        open('logs.txt', 'w')
+        
     log_text = f'[{time.strftime("%d-%m-%Y %H:%M:%S")}] {text}'
     print(log_text)
     # write log into file logs.txt
